@@ -1,0 +1,143 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "09509a01-1753-4335-a2cb-cd1d8d770883": {
+        "id": "09509a01-1753-4335-a2cb-cd1d8d770883",
+        "parent": null,
+        "name": "PowerAppsDemo",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "483ed396-8eaa-4bc5-9ffe-bd3d1e63134c",
+          "8a23ec39-ae88-4bd3-bb14-a7ca0d4be162",
+          "a5343dfc-5fe5-418e-aa92-2b67b2df8312"
+        ],
+        "isRemovable": false,
+        "filePath": "PowerAppsDemo"
+      },
+      "483ed396-8eaa-4bc5-9ffe-bd3d1e63134c": {
+        "id": "483ed396-8eaa-4bc5-9ffe-bd3d1e63134c",
+        "parent": "09509a01-1753-4335-a2cb-cd1d8d770883",
+        "name": "lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "PowerAppsDemo/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      },
+      "8a23ec39-ae88-4bd3-bb14-a7ca0d4be162": {
+        "id": "8a23ec39-ae88-4bd3-bb14-a7ca0d4be162",
+        "parent": "09509a01-1753-4335-a2cb-cd1d8d770883",
+        "name": "getPowerAppsData.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "PowerAppsDemo/getPowerAppsData.py",
+        "code": "def handler(event, context):\n    return {\"message\": \"Successfully executed\", \"data\": 9}\n",
+        "config": {
+          "runtime": "python3.6",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": [
+          {
+            "resourceName": "apigusEast1getPowerAppsDatapowerappsget",
+            "config": {}
+          }
+        ]
+      },
+      "a5343dfc-5fe5-418e-aa92-2b67b2df8312": {
+        "id": "a5343dfc-5fe5-418e-aa92-2b67b2df8312",
+        "parent": "09509a01-1753-4335-a2cb-cd1d8d770883",
+        "name": "__init__.py",
+        "type": "PYTHON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "PowerAppsDemo/__init__.py",
+        "code": ""
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "09509a01-1753-4335-a2cb-cd1d8d770883",
+    "openFiles": [
+      "483ed396-8eaa-4bc5-9ffe-bd3d1e63134c",
+      "8a23ec39-ae88-4bd3-bb14-a7ca0d4be162"
+    ],
+    "currentFileId": "8a23ec39-ae88-4bd3-bb14-a7ca0d4be162",
+    "resources": {
+      "apigusEast1getPowerAppsDatapowerappsget": {
+        "name": "apigusEast1getPowerAppsDatapowerappsget",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 0,
+          "apiName": "getPowerAppsData",
+          "endpointType": "EDGE",
+          "resourceMode": 0,
+          "resourceName": "powerapps",
+          "resourcePath": "/powerapps",
+          "restMethod": "GET",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 0,
+          "stageName": "prod",
+          "mode": 0
+        }
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      },
+      {
+        "lambdaId": "8a23ec39-ae88-4bd3-bb14-a7ca0d4be162",
+        "varKey": "PYTHONPATH",
+        "varValue": "/var/runtime:/var/task/PowerAppsDemo",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "PowerAppsDemo",
+    "projectDescription": "Connect Sigma to PowerApps",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1576166566746
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "PowerAppsDemo",
+      "url": "https://github.com/allanitis/PowerAppsDemo"
+    }
+  }
+}
